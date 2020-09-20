@@ -3,9 +3,9 @@ import React from 'react';
 class SearchBar extends React.Component {
     state = { term: '' };
 
+    // turn this into arrow function to avoid the undefined error
     onFormSubmit= (event) => {
         event.preventDefault();
-
         this.props.onSubmit(this.state.term);
     }
 
